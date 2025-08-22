@@ -1,0 +1,91 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# Secrets and sensitive data
+*secret*
+*Secret*
+*SECRET*
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+.env
+.env.*
+
+# Kubernetes generated files
+*.yaml.bak
+*.yml.bak
+kustomization.yaml.bak
+kustomization.yml.bak
+
+# Helm files
+charts/
+*.tgz
+Chart.lock
+
+# Terraform files (if used with K8s)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# ArgoCD/GitOps generated files
+.argocd/
+.argo/
+
+# Local development
+.local/
+local/
+dev/
+.dev/
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+dist/
+build/
+target/
+
+# Node modules (if using JavaScript tools)
+node_modules/
+
+# Python files (if using Python tools)
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Go files (if using Go tools)
+vendor/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Cache directories
+.cache/
+cache/
