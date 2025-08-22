@@ -21,9 +21,6 @@ Thumbs.db
 .temp/
 
 # Secrets and sensitive data
-*secret*
-*Secret*
-*SECRET*
 *.key
 *.pem
 *.crt
