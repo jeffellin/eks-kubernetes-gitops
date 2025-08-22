@@ -19,9 +19,6 @@ spec:
         image: ellinj/demo-sec-app:82c61cc85eec72390b5d23f0f517612fa26cb78d
         ports:
         - containerPort: 8080
-        env:
-        - name: SPRING_PROFILES_ACTIVE
-          value: "prod"
         resources:
           requests:
             memory: "1Gi"
