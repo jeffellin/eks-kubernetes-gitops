@@ -18,6 +18,7 @@ spec:
     automated:
       prune: true
       selfHeal: true
+      automated: false 
     syncOptions:
       - CreateNamespace=true
   revisionHistoryLimit: 3
