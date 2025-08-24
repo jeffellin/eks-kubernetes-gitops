@@ -26,19 +26,16 @@ spec:
           valueFrom:
             secretKeyRef:
               name: postgres-secret
-              namespace: secrets
               key: jdbc_url
         - name: SPRING_DATASOURCE_USERNAME
           valueFrom:
             secretKeyRef:
               name: postgres-secret
-              namespace: secrets
               key: user
         - name: SPRING_DATASOURCE_PASSWORD
           valueFrom:
             secretKeyRef:
               name: postgres-secret
-              namespace: secrets
               key: password
         resources:
           requests:
