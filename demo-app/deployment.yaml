@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: ellinj/demo-sec-app:135ae0c18b7202af3ad5008899750febbc7332d7
+        image: ellinj/demo-sec-app:761705fc6408e3aab9ff308c0bb9aac9b04b61b0
         ports:
         - containerPort: 8080
         env:
