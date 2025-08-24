@@ -38,7 +38,7 @@ spec:
         - name: falco.bufferedOutputs
           value: "false"
         - name: falcosidekick.enabled
-          value: "false"
+          value: "true"
       values: |
         driver:
           enabled: true
@@ -67,6 +67,50 @@ spec:
             key: node-role.kubernetes.io/control-plane
         serviceMonitor:
           enabled: false
+        
+        falcosidekick:
+          enabled: true
+          replicas: 1
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+          config:
+            slack:
+              webhookurl: ""
+            elasticsearch:
+              hostport: ""
+            loki:
+              hostport: ""
+            webhook:
+              address: ""
+            customfields: "source:falco"
+          service:
+            type: ClusterIP
+            port: 2801
+          webui:
+            enabled: true
+            redis:
+              storageclass: ""
+              storagesize: "1Gi"
+            service:
+              type: LoadBalancer
+              port: 2802
+              annotations:
+                service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+                service.beta.kubernetes.io/aws-load-balancer-scheme: "internet-facing"
+            ingress:
+              enabled: false
+            resources:
+              requests:
+                cpu: 100m
+                memory: 128Mi
+              limits:
+                cpu: 500m
+                memory: 256Mi
   destination:
     server: https://kubernetes.default.svc
     namespace: falco
