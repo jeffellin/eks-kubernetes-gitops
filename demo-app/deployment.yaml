@@ -19,6 +19,27 @@ spec:
         image: ellinj/demo-sec-app:4b08b3775e1d2eccba611e3c4afaecfc72e076e6
         ports:
         - containerPort: 8080
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: "prod"
+        - name: SPRING_DATASOURCE_URL
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secret
+              namespace: secrets
+              key: jdbc_url
+        - name: SPRING_DATASOURCE_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secret
+              namespace: secrets
+              key: user
+        - name: SPRING_DATASOURCE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secret
+              namespace: secrets
+              key: password
         resources:
           requests:
             memory: "1Gi"
