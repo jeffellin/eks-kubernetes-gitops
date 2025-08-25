@@ -4,7 +4,7 @@ metadata:
   name: demo-app-service-account
   namespace: demo-app
   annotations:
-    eks.amazonaws.com/role-arn: "arn:aws:iam::ACCOUNT_ID:role/wiz-demo-app-role"
+    eks.amazonaws.com/role-arn: "arn:aws:iam::571600872795:role/wiz-demo-app-role"
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole

@@ -17,7 +17,7 @@ spec:
       serviceAccountName: demo-app-service-account
       containers:
       - name: demo-app
-        image: ellinj/demo-sec-app:d28622c1706c0475d195cd89b27974bf15ab688f
+        image: 571600872795.dkr.ecr.us-west-2.amazonaws.com/demo-app:d28622c1706c0475d195cd89b27974bf15ab688f
         ports:
         - containerPort: 8080
         env:
